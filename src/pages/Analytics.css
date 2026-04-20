@@ -1,0 +1,64 @@
+.analytics-page { display: flex; flex-direction: column; min-height: 100dvh; background: var(--c-bg); }
+
+.analytics-main {
+  max-width: 1200px; width: 100%;
+  margin: 0 auto; padding: 32px 24px 64px;
+  display: flex; flex-direction: column; gap: 32px;
+}
+
+.analytics-header { text-align: left; }
+.analytics-heading { font-size: 1.8rem; font-weight: 800; color: var(--c-text); margin-bottom: 8px; }
+.analytics-sub { font-size: 14px; color: var(--c-text-3); font-weight: 500; }
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.analytics-card {
+    background: #fff;
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; gap: 20px;
+}
+
+.analytics-card h2 { font-size: 1.1rem; font-weight: 700; color: var(--c-text-2); }
+
+.card--full { grid-column: 1 / -1; }
+
+.analytics-empty { text-align: center; padding: 40px 0; color: var(--c-text-4); font-size: 14px; grid-column: 1 / -1; }
+
+.analytics-tip {
+    background: #fff; border: 1px solid var(--c-border);
+    border-radius: var(--r-sm); padding: 10px 14px;
+    box-shadow: var(--shadow-md); font-size: 12px;
+    color: var(--c-text-3); line-height: 1.6;
+}
+.analytics-tip strong { display: block; font-size: 11px; color: var(--c-text); margin-bottom: 3px; }
+
+/* News Section */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.news-item {
+    background: var(--c-bg);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    padding: 18px;
+    display: flex; flex-direction: column; gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.news-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); background: #fff; border-color: var(--c-primary-light); }
+.news-item strong { font-size: 14px; color: var(--c-text); }
+.news-item p { font-size: 12.5px; margin: 0; color: var(--c-text-3); }
+.source-badge { font-size: 10px; font-weight: 700; color: var(--c-primary); text-transform: uppercase; letter-spacing: 0.05em; }
+
+@media (max-width: 768px) {
+    .analytics-grid { grid-template-columns: 1fr; }
+    .analytics-main { padding: 16px 16px 40px; }
+}

@@ -1,0 +1,59 @@
+.budget-page { display: flex; flex-direction: column; min-height: 100dvh; background: var(--c-bg); }
+
+.budget-main {
+  max-width: 900px; width: 100%;
+  margin: 0 auto; padding: 32px 24px 64px;
+  display: flex; flex-direction: column; gap: 32px;
+}
+
+.budget-header { text-align: center; }
+.budget-heading { font-size: 1.8rem; font-weight: 800; color: var(--c-text); margin-bottom: 8px; }
+.budget-sub { font-size: 14px; color: var(--c-text-3); font-weight: 500; }
+
+.budget-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 32px;
+}
+
+.budget-form-card {
+    background: #fff;
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-lg);
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    display: flex; flex-direction: column; gap: 20px;
+}
+
+.budget-form-card h2 { font-size: 1.1rem; font-weight: 700; color: var(--c-text-2); }
+
+.budget-form { display: flex; flex-direction: column; gap: 24px; }
+
+.f-group { display: flex; flex-direction: column; gap: 8px; }
+.f-group label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--c-text-4); }
+
+.f-input {
+  padding: 12px 16px;
+  border: 1px solid var(--c-border); border-radius: var(--r-md);
+  font-family: inherit; font-size: 15px; color: var(--c-text);
+  background: var(--c-bg); outline: none; transition: all 0.2s ease;
+}
+.f-input:focus { background: #fff; border-color: var(--c-primary); shadow: 0 0 0 4px rgba(67,97,238,0.1); }
+.f-input--err { border-color: var(--c-expense); }
+.f-err { font-size: 11.5px; color: var(--c-expense); margin-top: 4px; font-weight: 500; }
+
+.btn-primary { 
+    padding: 12px 24px; background: var(--c-primary); color: #fff; font-weight: 700; 
+    border: none; border-radius: var(--r-md); cursor: pointer; transition: all 0.2s;
+}
+.btn-primary:hover { filter: brightness(1.1); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-primary:active { transform: translateY(0); }
+
+.budget-insight {
+    background: #fff; border: 1px solid #e0f2fe; border-radius: var(--r-lg);
+    padding: 24px; display: flex; align-items: flex-start; gap: 20px;
+}
+.insight-icon { font-size: 2rem; }
+.insight-text { display: flex; flex-direction: column; gap: 6px; }
+.insight-text strong { font-size: 1rem; color: var(--c-text); }
+.insight-text p { font-size: 13.5px; margin: 0; color: var(--c-text-3); }

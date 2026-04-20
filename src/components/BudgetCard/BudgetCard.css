@@ -1,0 +1,40 @@
+.budget-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  display: flex; flex-direction: column; gap: 16px;
+  transition: border-color .3s ease;
+}
+
+.budget-card--over { border-color: var(--c-expense); }
+
+.budget-card__head { display: flex; justify-content: space-between; align-items: center; }
+.budget-card__label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--c-text-4); }
+
+.budget-card__status { 
+    font-size: 11px; font-weight: 700; text-transform: uppercase; 
+    padding: 2px 10px; background: var(--c-income-bg); color: var(--c-income); border-radius: 4px;
+}
+.status--over { background: var(--c-expense-bg); color: var(--c-expense); }
+
+.budget-card__main { display: flex; flex-direction: column; gap: 12px; }
+.budget-card__amount { font-size: 1.6rem; color: var(--c-text); letter-spacing: -.03em; }
+.budget-card__amount span { font-size: 1.1rem; color: var(--c-text-4); font-weight: 400; }
+
+.budget-card__progress {
+    width: 100%; height: 8px; background: var(--c-bg); border-radius: 4px; overflow: hidden;
+}
+.progress-bar { 
+    height: 100%; background: var(--c-primary); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.budget-card--over .progress-bar { background: var(--c-expense); }
+
+.budget-card__footer { display: flex; gap: 24px; border-top: 1px solid var(--c-bg); padding-top: 12px; }
+.footer-item { display: flex; flex-direction: column; gap: 2px; }
+.footer-item label { font-size: 10px; font-weight: 600; text-transform: uppercase; color: var(--c-text-4); }
+.footer-item strong { font-size: 14px; font-weight: 700; color: var(--c-text-2); }
+
+.text-danger { color: var(--c-expense) !important; }
+.text-success { color: var(--c-income) !important; }
